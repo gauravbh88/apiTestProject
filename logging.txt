@@ -1,0 +1,107 @@
+Request method:	POST
+Request URI:	http://restapi.adequateshop.com/api/authaccount/registration
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "<g`? ?O",
+    "name": "TestUser389772917",
+    "email": "TestUser389772917@gmail.com"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Sun, 13 Mar 2022 13:31:05 GMT
+Content-Length: 162
+
+{
+    "code": 0,
+    "message": "success",
+    "data": {
+        "Id": 24742,
+        "Name": "TestUser389772917",
+        "Email": "TestUser389772917@gmail.com",
+        "Token": "1e0d613e-69b6-4f68-96f2-92573e7377bf"
+    }
+}
+Request method:	POST
+Request URI:	http://restapi.adequateshop.com/api/authaccount/login
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:
+{
+    "password": "<g`? ?O",
+    "email": "TestUser389772917@gmail.com"
+}
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Sun, 13 Mar 2022 13:31:07 GMT
+Content-Length: 162
+
+{
+    "code": 0,
+    "message": "success",
+    "data": {
+        "Id": 24742,
+        "Name": "TestUser389772917",
+        "Email": "TestUser389772917@gmail.com",
+        "Token": "c4a01eac-bb00-4f99-9e98-22b87c8649d3"
+    }
+}
+Request method:	GET
+Request URI:	http://restapi.adequateshop.com/api/users/24742
+Proxy:			<none>
+Request params:	<none>
+Query params:	<none>
+Form params:	<none>
+Path params:	<none>
+Headers:		Authorization=Bearer c4a01eac-bb00-4f99-9e98-22b87c8649d3
+				Accept=*/*
+				Content-Type=application/json; charset=UTF-8
+Cookies:		<none>
+Multiparts:		<none>
+Body:			<none>
+HTTP/1.1 200 OK
+Cache-Control: no-cache
+Pragma: no-cache
+Content-Type: application/json; charset=utf-8
+Expires: -1
+Server: Microsoft-IIS/10.0
+X-AspNet-Version: 4.0.30319
+X-Powered-By: ASP.NET
+Date: Sun, 13 Mar 2022 13:31:07 GMT
+Content-Length: 211
+
+{
+    "id": 24742,
+    "name": "TestUser389772917",
+    "email": "TestUser389772917@gmail.com",
+    "profilepicture": "http://restapi.adequateshop.com/Media//Images/userimageicon.png",
+    "location": "USA",
+    "createdat": "0001-01-01T00:00:00"
+}
