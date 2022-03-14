@@ -2,64 +2,64 @@
 <testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-13T14:30:59 CET" name="RegressionSuite" finished-at="2022-03-13T14:31:09 CET" duration-ms="9501">
+  <suite started-at="2022-03-14T11:01:56 CET" name="RegressionSuite" finished-at="2022-03-14T11:02:01 CET" duration-ms="5146">
     <groups>
     </groups>
-    <test started-at="2022-03-13T14:30:59 CET" name="Testing" finished-at="2022-03-13T14:31:09 CET" duration-ms="9501">
+    <test started-at="2022-03-14T11:01:56 CET" name="Testing" finished-at="2022-03-14T11:02:01 CET" duration-ms="5146">
       <class name="com.testAssignmentDnb.test.APITests">
-        <test-method is-config="true" signature="beforeTest()[pri:0, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d]" started-at="2022-03-13T14:30:59 CET" name="beforeTest" finished-at="2022-03-13T14:31:00 CET" duration-ms="336" status="PASS">
+        <test-method is-config="true" signature="beforeSuite()[pri:0, instance:com.testAssignmentDnb.test.APITests@769e7ee8]" started-at="2022-03-14T11:01:56 CET" name="beforeSuite" finished-at="2022-03-14T11:01:56 CET" duration-ms="182" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method signature="createUser()[pri:1, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d]" started-at="2022-03-13T14:31:00 CET" name="createUser" finished-at="2022-03-13T14:31:07 CET" duration-ms="6926" status="PASS">
+        </test-method> <!-- beforeSuite -->
+        <test-method signature="createUser()[pri:1, instance:com.testAssignmentDnb.test.APITests@769e7ee8]" started-at="2022-03-14T11:01:56 CET" name="createUser" finished-at="2022-03-14T11:02:00 CET" duration-ms="3450" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createUser -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d]" started-at="2022-03-13T14:31:07 CET" name="afterMethod" finished-at="2022-03-13T14:31:07 CET" duration-ms="11" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testAssignmentDnb.test.APITests@769e7ee8]" started-at="2022-03-14T11:02:00 CET" name="afterMethod" finished-at="2022-03-14T11:02:00 CET" duration-ms="4" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=createUser status=SUCCESS method=APITests.createUser()[pri:1, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d] output={null}]]]>
+                <![CDATA[[TestResult name=createUser status=SUCCESS method=APITests.createUser()[pri:1, instance:com.testAssignmentDnb.test.APITests@769e7ee8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="loginVerification()[pri:2, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d]" started-at="2022-03-13T14:31:07 CET" name="loginVerification" finished-at="2022-03-13T14:31:07 CET" duration-ms="760" status="PASS">
+        <test-method signature="loginVerification()[pri:2, instance:com.testAssignmentDnb.test.APITests@769e7ee8]" started-at="2022-03-14T11:02:00 CET" name="loginVerification" finished-at="2022-03-14T11:02:00 CET" duration-ms="802" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginVerification -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d]" started-at="2022-03-13T14:31:07 CET" name="afterMethod" finished-at="2022-03-13T14:31:07 CET" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testAssignmentDnb.test.APITests@769e7ee8]" started-at="2022-03-14T11:02:00 CET" name="afterMethod" finished-at="2022-03-14T11:02:00 CET" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=loginVerification status=SUCCESS method=APITests.loginVerification()[pri:2, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d] output={null}]]]>
+                <![CDATA[[TestResult name=loginVerification status=SUCCESS method=APITests.loginVerification()[pri:2, instance:com.testAssignmentDnb.test.APITests@769e7ee8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method signature="getUserById()[pri:3, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d]" started-at="2022-03-13T14:31:07 CET" name="getUserById" finished-at="2022-03-13T14:31:08 CET" duration-ms="536" status="PASS">
+        <test-method signature="getUserById()[pri:3, instance:com.testAssignmentDnb.test.APITests@769e7ee8]" started-at="2022-03-14T11:02:00 CET" name="getUserById" finished-at="2022-03-14T11:02:01 CET" duration-ms="847" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- getUserById -->
-        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d]" started-at="2022-03-13T14:31:08 CET" name="afterMethod" finished-at="2022-03-13T14:31:08 CET" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.testAssignmentDnb.test.APITests@769e7ee8]" started-at="2022-03-14T11:02:01 CET" name="afterMethod" finished-at="2022-03-14T11:02:01 CET" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=getUserById status=SUCCESS method=APITests.getUserById()[pri:3, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d] output={null}]]]>
+                <![CDATA[[TestResult name=getUserById status=SUCCESS method=APITests.getUserById()[pri:3, instance:com.testAssignmentDnb.test.APITests@769e7ee8] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method is-config="true" signature="afterTest()[pri:0, instance:com.testAssignmentDnb.test.APITests@3c9d0b9d]" started-at="2022-03-13T14:31:08 CET" name="afterTest" finished-at="2022-03-13T14:31:09 CET" duration-ms="828" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testAssignmentDnb.test.APITests@769e7ee8]" started-at="2022-03-14T11:02:01 CET" name="tearDown" finished-at="2022-03-14T11:02:02 CET" duration-ms="517" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
+        </test-method> <!-- tearDown -->
       </class> <!-- com.testAssignmentDnb.test.APITests -->
     </test> <!-- Testing -->
   </suite> <!-- RegressionSuite -->

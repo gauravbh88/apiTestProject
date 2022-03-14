@@ -29,25 +29,12 @@ public class APITests extends UtilityClass {
 	String loginVerificationid;
 	String loginVerificationName;
 	String loginVerificationEmail;
-	ExtentTest test;
-	ExtentHtmlReporter htmlReporter;
-	ExtentReports extent;
-
-	@BeforeTest
-	public void beforeTest() {
-
-		htmlReporter = new ExtentHtmlReporter("TestReport.html");
-		extent = new ExtentReports();
-		extent.attachReporter(htmlReporter);
-
-		
-
-	}
+	
 
 	@Test(priority = 1)
 	public void createUser() throws IOException {
 		
-		test = extent.createTest("Verify createUser api", "Checking the Title");
+		test = extent.createTest("Verify createUser api");
 		test.log(Status.INFO, "createUsertest started Successfully");
 		postContent = createBody();
 		
@@ -69,7 +56,7 @@ public class APITests extends UtilityClass {
 	@Test(priority = 2)
 	public void loginVerification() throws IOException {
 
-		test = extent.createTest("Verify loginVerification api", "Checking the Title");
+		test = extent.createTest("Verify loginVerification api");
 		test.log(Status.INFO, "loginVerificationrTest started Successfully");
 		postContent.remove("name");
 		Response loginVerificationResponse = given().spec(requestSpecification()).body(postContent).when().post("/authaccount/login").then()
@@ -96,11 +83,11 @@ public class APITests extends UtilityClass {
 	@Test(priority = 3)
 	public void getUserById() throws IOException {
 
-		test = extent.createTest("Verify getUserById api", "Checking the Title");
+		test = extent.createTest("Verify getUserById api");
 		test.log(Status.INFO, "getUserByIdTest started Successfully");
 	
 		Response getUserByIdResponse = given().spec(requestSpecification()).header("Authorization", "Bearer " + loginVerificationToken).when()
-				.get("/users/" + loginVerificationid).then().spec(responseSpecification()).log().all().extract().response();
+				.get("/users/" + loginVerificationid).then().spec(responseSpecification()).extract().response();
 		
 		
 		test.log(Status.INFO,"Response Code : " + "\n" + getUserByIdResponse.statusCode());
@@ -111,24 +98,8 @@ public class APITests extends UtilityClass {
 		assertEquals(loginVerificationEmail, getJsonPath(getUserByIdResponse, "email"));
 		assertEquals(loginVerificationid, getJsonPath(getUserByIdResponse, "id"));
 
-		System.out.println("getUserById" + getUserByIdResponse.asString());
+		
 
 	}
 
-	@AfterTest
-	public void afterTest() {
-		extent.flush();
-	}
-
-	@AfterMethod
-	public void afterMethod(ITestResult result) {
-		if (result.getStatus() == ITestResult.FAILURE) {
-			test.log(Status.FAIL, "Test failed " + result.getThrowable());
-		} else if (result.getStatus() == ITestResult.SKIP) {
-			test.log(Status.SKIP, "Test skipped " + result.getThrowable());
-		} else {
-			test.log(Status.PASS, "Test passed");
-		}
-
-	}
 }

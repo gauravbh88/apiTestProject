@@ -9,6 +9,16 @@ import java.util.HashMap;
 import java.util.Properties;
 import java.util.Random;
 
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
+
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.builder.ResponseSpecBuilder;
 import io.restassured.filter.log.RequestLoggingFilter;
@@ -26,6 +36,39 @@ public class UtilityClass {
 
 	public static RequestSpecification requestSpec;
 	public static ResponseSpecification responseSpec;
+	public static ExtentTest test;
+	public static ExtentHtmlReporter htmlReporter;
+	public static ExtentReports extent;
+
+
+	@BeforeSuite
+
+	public void beforeSuite() {
+
+		htmlReporter = new ExtentHtmlReporter("TestReport.html");
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+
+		
+
+	}
+
+	@AfterMethod
+	public void afterMethod(ITestResult result) {
+		if (result.getStatus() == ITestResult.FAILURE) {
+			test.log(Status.FAIL, "Test failed " + result.getThrowable());
+		} else if (result.getStatus() == ITestResult.SKIP) {
+			test.log(Status.SKIP, "Test skipped " + result.getThrowable());
+		} else {
+			test.log(Status.PASS, "Test passed");
+		}
+
+	}
+
+	@AfterSuite
+	public void tearDown(){
+	    extent.flush();
+	   }
 	
 	public static RequestSpecification requestSpecification() throws IOException
 	{
@@ -59,19 +102,12 @@ public class UtilityClass {
 	public static ResponseSpecification responseSpecification() throws IOException
 	{
 
-	
-		
-	
-		   responseSpec = new ResponseSpecBuilder()
+				responseSpec = new ResponseSpecBuilder()
 						  .expectStatusCode(200)
 						  .expectContentType(ContentType.JSON)
 						  .build();
 			
-		return responseSpec;
-		
-					
-		
-		
+				return responseSpec;
 		
 	}
 	
@@ -96,7 +132,6 @@ public class UtilityClass {
 	{
 		Properties prop =new Properties();
 		FileInputStream fis= new FileInputStream("src/main/resources/global.properties");
-		//FileInputStream fis =new FileInputStream("C:\\Users\\5012gbh\\eclipse-workspace\\testAssignmentDnb\\src\\test\\java\\resources\\global.properties");
 		prop.load(fis);
 		return prop.getProperty(key);
 	
